@@ -15,7 +15,7 @@ namespace AKIRAClientiFidelity
         public AvvioModulo()
         {}
 
-        #region "Avvio Form Principale"
+        #region "Avvio Form Principale "
         public string RicercaFidelity()
         {
             Elencoclienti.ShowDialog();
