@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.GrigliaFidelity = new System.Windows.Forms.DataGridView();
             this.txtRicerca = new System.Windows.Forms.TextBox();
             this.btnA = new System.Windows.Forms.Button();
             this.btnB = new System.Windows.Forms.Button();
@@ -77,51 +76,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.GrigliaFidelity)).BeginInit();
+            this.btnConferma = new System.Windows.Forms.Button();
+            this.GrigliaFidelity = new System.Windows.Forms.DataGridView();
+            this.btnRicerca = new System.Windows.Forms.Button();
+            this.btnScorriSu = new System.Windows.Forms.Button();
+            this.btnScorriGiu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrigliaFidelity)).BeginInit();
             this.SuspendLayout();
-            // 
-            // GrigliaFidelity
-            // 
-            this.GrigliaFidelity.AllowUserToAddRows = false;
-            this.GrigliaFidelity.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.GrigliaFidelity.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.GrigliaFidelity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GrigliaFidelity.BackgroundColor = System.Drawing.Color.White;
-            this.GrigliaFidelity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.GrigliaFidelity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GrigliaFidelity.DefaultCellStyle = dataGridViewCellStyle6;
-            this.GrigliaFidelity.GridColor = System.Drawing.Color.White;
-            this.GrigliaFidelity.Location = new System.Drawing.Point(6, 51);
-            this.GrigliaFidelity.Name = "GrigliaFidelity";
-            this.GrigliaFidelity.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GrigliaFidelity.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.GrigliaFidelity.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.GrigliaFidelity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GrigliaFidelity.Size = new System.Drawing.Size(868, 236);
-            this.GrigliaFidelity.TabIndex = 0;
-            this.GrigliaFidelity.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrigliaFidelity_CellContentClick);
-            this.GrigliaFidelity.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrigliaArticoli_CellDoubleClick);
             // 
             // txtRicerca
             // 
@@ -154,7 +118,7 @@
             this.btnB.BackColor = System.Drawing.Color.White;
             this.btnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnB.Location = new System.Drawing.Point(414, 212);
+            this.btnB.Location = new System.Drawing.Point(347, 212);
             this.btnB.Name = "btnB";
             this.btnB.Size = new System.Drawing.Size(80, 60);
             this.btnB.TabIndex = 3;
@@ -167,7 +131,7 @@
             this.btnC.BackColor = System.Drawing.Color.White;
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnC.Location = new System.Drawing.Point(242, 212);
+            this.btnC.Location = new System.Drawing.Point(175, 212);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(80, 60);
             this.btnC.TabIndex = 4;
@@ -297,7 +261,7 @@
             this.btnM.BackColor = System.Drawing.Color.White;
             this.btnM.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnM.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnM.Location = new System.Drawing.Point(586, 212);
+            this.btnM.Location = new System.Drawing.Point(519, 212);
             this.btnM.Name = "btnM";
             this.btnM.Size = new System.Drawing.Size(80, 60);
             this.btnM.TabIndex = 14;
@@ -310,7 +274,7 @@
             this.btnN.BackColor = System.Drawing.Color.White;
             this.btnN.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnN.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnN.Location = new System.Drawing.Point(500, 212);
+            this.btnN.Location = new System.Drawing.Point(433, 212);
             this.btnN.Name = "btnN";
             this.btnN.Size = new System.Drawing.Size(80, 60);
             this.btnN.TabIndex = 15;
@@ -414,7 +378,7 @@
             this.btnV.BackColor = System.Drawing.Color.White;
             this.btnV.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnV.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnV.Location = new System.Drawing.Point(328, 212);
+            this.btnV.Location = new System.Drawing.Point(261, 212);
             this.btnV.Name = "btnV";
             this.btnV.Size = new System.Drawing.Size(80, 60);
             this.btnV.TabIndex = 23;
@@ -427,7 +391,7 @@
             this.btnX.BackColor = System.Drawing.Color.White;
             this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnX.Location = new System.Drawing.Point(156, 212);
+            this.btnX.Location = new System.Drawing.Point(89, 212);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(80, 60);
             this.btnX.TabIndex = 24;
@@ -453,7 +417,7 @@
             this.btnZ.BackColor = System.Drawing.Color.White;
             this.btnZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZ.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnZ.Location = new System.Drawing.Point(70, 212);
+            this.btnZ.Location = new System.Drawing.Point(3, 212);
             this.btnZ.Name = "btnZ";
             this.btnZ.Size = new System.Drawing.Size(80, 60);
             this.btnZ.TabIndex = 26;
@@ -482,6 +446,7 @@
             this.panel1.Controls.Add(this.btn9);
             this.panel1.Controls.Add(this.btn8);
             this.panel1.Controls.Add(this.btn7);
+            this.panel1.Controls.Add(this.btnCanc);
             this.panel1.Controls.Add(this.btn6);
             this.panel1.Controls.Add(this.btn5);
             this.panel1.Controls.Add(this.btn4);
@@ -524,11 +489,11 @@
             this.btnCancChar.BackColor = System.Drawing.Color.White;
             this.btnCancChar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancChar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnCancChar.Location = new System.Drawing.Point(672, 212);
+            this.btnCancChar.Location = new System.Drawing.Point(605, 212);
             this.btnCancChar.Name = "btnCancChar";
-            this.btnCancChar.Size = new System.Drawing.Size(177, 60);
+            this.btnCancChar.Size = new System.Drawing.Size(71, 60);
             this.btnCancChar.TabIndex = 39;
-            this.btnCancChar.Text = "CHAR";
+            this.btnCancChar.Text = "<<";
             this.btnCancChar.UseVisualStyleBackColor = false;
             this.btnCancChar.Click += new System.EventHandler(this.btnCancChar_Click);
             // 
@@ -667,22 +632,22 @@
             this.btnAnnulla.BackColor = System.Drawing.Color.White;
             this.btnAnnulla.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnulla.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnAnnulla.Location = new System.Drawing.Point(18, 682);
+            this.btnAnnulla.Location = new System.Drawing.Point(22, 679);
             this.btnAnnulla.Name = "btnAnnulla";
-            this.btnAnnulla.Size = new System.Drawing.Size(880, 49);
+            this.btnAnnulla.Size = new System.Drawing.Size(432, 49);
             this.btnAnnulla.TabIndex = 29;
-            this.btnAnnulla.Text = "Esci";
+            this.btnAnnulla.Text = "Annulla";
             this.btnAnnulla.UseVisualStyleBackColor = false;
-            this.btnAnnulla.Click += new System.EventHandler(this.btnEnter_Click);
+            this.btnAnnulla.Click += new System.EventHandler(this.btnAnnulla_Click);
             // 
             // btnCanc
             // 
             this.btnCanc.BackColor = System.Drawing.Color.White;
             this.btnCanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCanc.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnCanc.Location = new System.Drawing.Point(697, 15);
+            this.btnCanc.Location = new System.Drawing.Point(682, 212);
             this.btnCanc.Name = "btnCanc";
-            this.btnCanc.Size = new System.Drawing.Size(177, 60);
+            this.btnCanc.Size = new System.Drawing.Size(163, 60);
             this.btnCanc.TabIndex = 28;
             this.btnCanc.Text = "Cancel";
             this.btnCanc.UseVisualStyleBackColor = false;
@@ -699,11 +664,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnScorriSu);
+            this.groupBox2.Controls.Add(this.btnScorriGiu);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.GrigliaFidelity);
             this.groupBox2.Location = new System.Drawing.Point(12, 385);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(880, 291);
+            this.groupBox2.Size = new System.Drawing.Size(880, 270);
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             // 
@@ -712,11 +679,107 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(285, 16);
+            this.label1.Location = new System.Drawing.Point(253, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(286, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Elenco Tessere Clienti";
+            // 
+            // btnConferma
+            // 
+            this.btnConferma.BackColor = System.Drawing.Color.White;
+            this.btnConferma.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConferma.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnConferma.Location = new System.Drawing.Point(460, 679);
+            this.btnConferma.Name = "btnConferma";
+            this.btnConferma.Size = new System.Drawing.Size(432, 49);
+            this.btnConferma.TabIndex = 32;
+            this.btnConferma.Text = "Conferma";
+            this.btnConferma.UseVisualStyleBackColor = false;
+            this.btnConferma.Click += new System.EventHandler(this.btnConferma_Click);
+            // 
+            // GrigliaFidelity
+            // 
+            this.GrigliaFidelity.AllowUserToAddRows = false;
+            this.GrigliaFidelity.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.GrigliaFidelity.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.GrigliaFidelity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GrigliaFidelity.BackgroundColor = System.Drawing.Color.White;
+            this.GrigliaFidelity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.GrigliaFidelity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GrigliaFidelity.DefaultCellStyle = dataGridViewCellStyle6;
+            this.GrigliaFidelity.GridColor = System.Drawing.Color.White;
+            this.GrigliaFidelity.Location = new System.Drawing.Point(10, 51);
+            this.GrigliaFidelity.MultiSelect = false;
+            this.GrigliaFidelity.Name = "GrigliaFidelity";
+            this.GrigliaFidelity.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GrigliaFidelity.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.GrigliaFidelity.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.GrigliaFidelity.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.GrigliaFidelity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GrigliaFidelity.Size = new System.Drawing.Size(778, 197);
+            this.GrigliaFidelity.TabIndex = 0;
+            // 
+            // btnRicerca
+            // 
+            this.btnRicerca.BackColor = System.Drawing.Color.White;
+            this.btnRicerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRicerca.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnRicerca.Location = new System.Drawing.Point(709, 8);
+            this.btnRicerca.Name = "btnRicerca";
+            this.btnRicerca.Size = new System.Drawing.Size(163, 60);
+            this.btnRicerca.TabIndex = 33;
+            this.btnRicerca.Text = "Ricerca";
+            this.btnRicerca.UseVisualStyleBackColor = false;
+            this.btnRicerca.Click += new System.EventHandler(this.btnRicerca_Click);
+            // 
+            // btnScorriSu
+            // 
+            this.btnScorriSu.BackColor = System.Drawing.Color.White;
+            this.btnScorriSu.BackgroundImage = global::AKIRAClientiFidelity.Properties.Resources.png_clipart_triangle_logo_number_up_arrow_purple_angle1;
+            this.btnScorriSu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnScorriSu.Enabled = false;
+            this.btnScorriSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScorriSu.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnScorriSu.Location = new System.Drawing.Point(808, 51);
+            this.btnScorriSu.Name = "btnScorriSu";
+            this.btnScorriSu.Size = new System.Drawing.Size(58, 60);
+            this.btnScorriSu.TabIndex = 17;
+            this.btnScorriSu.UseVisualStyleBackColor = false;
+            this.btnScorriSu.Click += new System.EventHandler(this.btnScorriSu_Click);
+            // 
+            // btnScorriGiu
+            // 
+            this.btnScorriGiu.BackColor = System.Drawing.Color.White;
+            this.btnScorriGiu.BackgroundImage = global::AKIRAClientiFidelity.Properties.Resources.giu;
+            this.btnScorriGiu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnScorriGiu.Enabled = false;
+            this.btnScorriGiu.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScorriGiu.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnScorriGiu.Location = new System.Drawing.Point(808, 188);
+            this.btnScorriGiu.Name = "btnScorriGiu";
+            this.btnScorriGiu.Size = new System.Drawing.Size(58, 60);
+            this.btnScorriGiu.TabIndex = 16;
+            this.btnScorriGiu.UseVisualStyleBackColor = false;
+            this.btnScorriGiu.Click += new System.EventHandler(this.btnScorriGiu_Click);
             // 
             // ClientiFidelity
             // 
@@ -725,22 +788,22 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(904, 740);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRicerca);
+            this.Controls.Add(this.btnConferma);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAnnulla);
             this.Controls.Add(this.txtRicerca);
-            this.Controls.Add(this.btnCanc);
             this.ForeColor = System.Drawing.Color.SteelBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ClientiFidelity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.RicercaArticoli_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GrigliaFidelity)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrigliaFidelity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,9 +852,13 @@
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView GrigliaFidelity;
         private System.Windows.Forms.Button btnCancChar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnConferma;
+        private System.Windows.Forms.Button btnScorriSu;
+        private System.Windows.Forms.Button btnScorriGiu;
+        private System.Windows.Forms.DataGridView GrigliaFidelity;
+        private System.Windows.Forms.Button btnRicerca;
     }
 }
 

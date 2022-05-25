@@ -59,5 +59,35 @@ namespace AKIRAClientiFidelity.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giu {
+            get {
+                object obj = ResourceManager.GetObject("giu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_triangle_logo_number_up_arrow_purple_angle {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-triangle-logo-number-up-arrow-purple-angle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_triangle_logo_number_up_arrow_purple_angle1 {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-triangle-logo-number-up-arrow-purple-angle1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

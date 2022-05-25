@@ -79,5 +79,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-triangle-logo-number-up-arrow-purple-angle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,10 +17,11 @@ namespace AKIRAClientiFidelity
 
         #region "Caricamento Configurazione"
 
+
     {
         Configurazione Parametri = new Configurazione();
+        
 
-        string sqlQuery = "select cardnr as TESSERA,desc_ as NOMECLIENTE from debtcredit_anag";
         string carattere = "";
 
         int numeroRighe = 0;
@@ -43,26 +44,6 @@ namespace AKIRAClientiFidelity
             InitializeComponent();
         }
 
-        private void RicercaArticoli_Load(object sender, EventArgs e)
-        {
-            PopolaGriglia();
-        }
-        public void PopolaGriglia()
-
-        {
-            ClientiFidelity ClientiFidelity = new ClientiFidelity();
-            Parametri.LeggiConfigurazione();
-            try
-            {
-                ConnessioneDB(Parametri.ConnectionString, sqlQuery);
-            }
-            catch
-            {
-                MessageBox.Show("Attenzione!, Connessione non riuscita");
-            }
-            GrigliaFidelity.Refresh();
-
-        }
         #region "Metodo di connessione al DB KANEDA"
         public string ConnessioneDB(string ConnectionString, string sqlQuery)
         {
@@ -90,29 +71,28 @@ namespace AKIRAClientiFidelity
         private void txtRicerca_TextChanged(object sender, EventArgs e)
         {
 
-            string sqlQuery = "select cardnr as TESSERA,desc_ as NOMECLIENTE from debtcredit_anag" +
-                " where desc_ like '%" + txtRicerca.Text.ToString() + "%'" +
-                 "or CARDNR like '%" + txtRicerca.Text.ToString() + "%'";
-            ConnessioneDB(Parametri.ConnectionString, sqlQuery);
+
+        }
+        #endregion
+
+        #region "Caricamento Griglia"
+        public void PopolaGriglia(string Query)
+
+        {
+            ClientiFidelity ClientiFidelity = new ClientiFidelity();
+            Parametri.LeggiConfigurazione();
+            try
+            {
+                ConnessioneDB(Parametri.ConnectionString, Query);
+            }
+            catch
+            {
+                MessageBox.Show("Attenzione!, Connessione non riuscita");
+            }
             GrigliaFidelity.Refresh();
 
         }
         #endregion
-
-
-
-        #region "scelta FIDELITY dalla Griglia"
-        public void GrigliaArticoli_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            numeroRighe = GrigliaFidelity.RowCount;
-            RigaSelezionata = GrigliaFidelity.Rows[GrigliaFidelity.CurrentRow.Index].Index;
-            Fidelity = GrigliaFidelity.Rows[GrigliaFidelity.CurrentRow.Index].Cells[0].Value.ToString();
-            txtRicerca.Text = string.Empty;
-            this.Close();
-        }
-        #endregion
-
-
 
         #region "Gestione Configurazione Tastiera"
         private void btnQ_Click(object sender, EventArgs e)
@@ -605,9 +585,10 @@ namespace AKIRAClientiFidelity
         private void btnCanc_Click(object sender, EventArgs e)
         {
             txtRicerca.Text = "";
+            GrigliaFidelity.DataSource = "";
         }
 
-        private void btnEnter_Click(object sender, EventArgs e)
+        private void btnAnnulla_Click(object sender, EventArgs e)
         {
             Fidelity = "";
             this.Close();
@@ -774,12 +755,62 @@ namespace AKIRAClientiFidelity
                 txtRicerca.Text = output;
             }
         }
+
+
+        private void btnConferma_Click(object sender, EventArgs e)
+        {
+            numeroRighe = GrigliaFidelity.RowCount;
+            RigaSelezionata = GrigliaFidelity.Rows[GrigliaFidelity.CurrentRow.Index].Index;
+            Fidelity = GrigliaFidelity.Rows[GrigliaFidelity.CurrentRow.Index].Cells[0].Value.ToString();
+            txtRicerca.Text = string.Empty;
+            GrigliaFidelity.DataSource = "";
+            this.Close();
+        }
+
+        private void btnScorriSu_Click(object sender, EventArgs e)
+        {
+            if (GrigliaFidelity.Rows.Count > 0)
+            {
+                int totalRows = GrigliaFidelity.SelectedRows[0].Index;
+                if (totalRows < GrigliaFidelity.RowCount)
+                {
+                    GrigliaFidelity.Rows[totalRows].Selected = false;
+                    GrigliaFidelity.Rows[--totalRows].Selected = true;
+                    
+                    GrigliaFidelity.Rows[totalRows].Selected = true;
+                }
+
+
+            }
+        }
+
+        private void btnScorriGiu_Click(object sender, EventArgs e)
+        {
+            if (GrigliaFidelity.Rows.Count > 0)
+            {
+                int totalRows = GrigliaFidelity.SelectedRows[0].Index ;
+                if (totalRows < GrigliaFidelity.RowCount)
+                {
+                    GrigliaFidelity.Rows[totalRows].Selected = false;                    
+                    GrigliaFidelity.Rows[++totalRows].Selected = true;
+                    GrigliaFidelity.FirstDisplayedScrollingColumnIndex = 1;
+                }
+            }
+        }
+        private void btnRicerca_Click(object sender, EventArgs e)
+        {
+            string sqlQuery = "select cardnr as TESSERA,desc_ as NOMECLIENTE from debtcredit_anag" +
+            " where desc_ like '%" + txtRicerca.Text.ToString() + "%'" +
+            "or CARDNR like '%" + txtRicerca.Text.ToString() + "%'";
+
+            PopolaGriglia(sqlQuery);
+            GrigliaFidelity.Refresh();
+            txtRicerca.Text = string.Empty;
+        }
+
         #endregion "/Gestione Tastiera"
 
-        private void GrigliaFidelity_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }
 }
 
