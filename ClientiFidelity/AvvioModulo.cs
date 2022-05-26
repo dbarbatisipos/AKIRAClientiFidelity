@@ -18,6 +18,7 @@ namespace AKIRAClientiFidelity
         #region "Avvio Form Principale "
         public string RicercaFidelity()
         {
+            
             Elencoclienti.ShowDialog();
             StringBuilder _BapFile = new StringBuilder();
             int i = 0;

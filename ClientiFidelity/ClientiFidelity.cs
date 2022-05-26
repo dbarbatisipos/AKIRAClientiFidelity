@@ -55,12 +55,12 @@ namespace AKIRAClientiFidelity
             SqlDataAdapter dAdapter = new SqlDataAdapter(sqlQuery, dbConnessione);
             dbConnessione.Open();
             DataSet lstFidelity = new DataSet();
-            DataTable DataTable = new DataTable();
-            DataTable.TableName = "Lista Clienti";
+            DataTable TabellaFidelity = new DataTable();
+            TabellaFidelity.TableName = "Lista Clienti";
 
             SqlCommandBuilder dbQuery = new SqlCommandBuilder(dAdapter);
-            dAdapter.Fill(lstFidelity, DataTable.TableName);
-            BindingSource.DataSource = lstFidelity.Tables[DataTable.TableName];
+            dAdapter.Fill(lstFidelity, TabellaFidelity.TableName);
+            BindingSource.DataSource = lstFidelity.Tables[TabellaFidelity.TableName];
             GrigliaFidelity.DataSource = BindingSource;
             dbConnessione.Close();
             return GrigliaFidelity.DataSource.ToString();
@@ -591,6 +591,7 @@ namespace AKIRAClientiFidelity
         private void btnAnnulla_Click(object sender, EventArgs e)
         {
             Fidelity = "";
+            GrigliaFidelity.DataSource = "";
             this.Close();
         }
 
@@ -771,13 +772,21 @@ namespace AKIRAClientiFidelity
         {
             if (GrigliaFidelity.Rows.Count > 0)
             {
-                int totalRows = GrigliaFidelity.SelectedRows[0].Index;
-                if (totalRows < GrigliaFidelity.RowCount)
+                int riga = GrigliaFidelity.SelectedRows[0].Index;
+                if (riga < GrigliaFidelity.RowCount)
                 {
-                    GrigliaFidelity.Rows[totalRows].Selected = false;
-                    GrigliaFidelity.Rows[--totalRows].Selected = true;
-                    
-                    GrigliaFidelity.Rows[totalRows].Selected = true;
+                    GrigliaFidelity.Rows[riga].Selected = false;
+                    riga = --riga;
+                    if (riga > 0)
+                    {
+                        GrigliaFidelity.Rows[riga].Selected = true;
+                        GrigliaFidelity.CurrentCell = GrigliaFidelity[0, riga];
+                    }
+                    else
+                    {
+                        GrigliaFidelity.Rows[0].Selected = true;
+                        GrigliaFidelity.CurrentCell = GrigliaFidelity[0, 0];
+                    }
                 }
 
 
@@ -788,13 +797,21 @@ namespace AKIRAClientiFidelity
         {
             if (GrigliaFidelity.Rows.Count > 0)
             {
-                int totalRows = GrigliaFidelity.SelectedRows[0].Index ;
-                if (totalRows < GrigliaFidelity.RowCount)
+                DataTable TabellaFidelity = new DataTable();
+                int riga = GrigliaFidelity.SelectedRows[0].Index ;
+                GrigliaFidelity.Rows[riga].Selected = false;
+                int totaliRighe = GrigliaFidelity.RowCount - 1;
+                if (riga < totaliRighe)
                 {
-                    GrigliaFidelity.Rows[totalRows].Selected = false;                    
-                    GrigliaFidelity.Rows[++totalRows].Selected = true;
-                    GrigliaFidelity.FirstDisplayedScrollingColumnIndex = 1;
+                    GrigliaFidelity.Rows[++riga].Selected = true;
+                    GrigliaFidelity.CurrentCell = GrigliaFidelity[0, riga];
                 }
+                else
+                {
+                    GrigliaFidelity.Rows[riga].Selected = true;
+                    GrigliaFidelity.CurrentCell = GrigliaFidelity[0, totaliRighe];
+                }
+
             }
         }
         private void btnRicerca_Click(object sender, EventArgs e)
@@ -808,9 +825,13 @@ namespace AKIRAClientiFidelity
             txtRicerca.Text = string.Empty;
         }
 
+
         #endregion "/Gestione Tastiera"
 
+        private void ClientiFidelity_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

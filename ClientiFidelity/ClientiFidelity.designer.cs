@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtRicerca = new System.Windows.Forms.TextBox();
             this.btnA = new System.Windows.Forms.Button();
             this.btnB = new System.Windows.Forms.Button();
@@ -65,6 +65,7 @@
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
+            this.btnCanc = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
@@ -72,15 +73,14 @@
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.btnAnnulla = new System.Windows.Forms.Button();
-            this.btnCanc = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnConferma = new System.Windows.Forms.Button();
-            this.GrigliaFidelity = new System.Windows.Forms.DataGridView();
-            this.btnRicerca = new System.Windows.Forms.Button();
             this.btnScorriSu = new System.Windows.Forms.Button();
             this.btnScorriGiu = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.GrigliaFidelity = new System.Windows.Forms.DataGridView();
+            this.btnConferma = new System.Windows.Forms.Button();
+            this.btnRicerca = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -549,6 +549,19 @@
             this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
+            // btnCanc
+            // 
+            this.btnCanc.BackColor = System.Drawing.Color.White;
+            this.btnCanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCanc.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnCanc.Location = new System.Drawing.Point(682, 212);
+            this.btnCanc.Name = "btnCanc";
+            this.btnCanc.Size = new System.Drawing.Size(163, 60);
+            this.btnCanc.TabIndex = 28;
+            this.btnCanc.Text = "Cancel";
+            this.btnCanc.UseVisualStyleBackColor = false;
+            this.btnCanc.Click += new System.EventHandler(this.btnCanc_Click);
+            // 
             // btn6
             // 
             this.btn6.BackColor = System.Drawing.Color.White;
@@ -640,19 +653,6 @@
             this.btnAnnulla.UseVisualStyleBackColor = false;
             this.btnAnnulla.Click += new System.EventHandler(this.btnAnnulla_Click);
             // 
-            // btnCanc
-            // 
-            this.btnCanc.BackColor = System.Drawing.Color.White;
-            this.btnCanc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCanc.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnCanc.Location = new System.Drawing.Point(682, 212);
-            this.btnCanc.Name = "btnCanc";
-            this.btnCanc.Size = new System.Drawing.Size(163, 60);
-            this.btnCanc.TabIndex = 28;
-            this.btnCanc.Text = "Cancel";
-            this.btnCanc.UseVisualStyleBackColor = false;
-            this.btnCanc.Click += new System.EventHandler(this.btnCanc_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel1);
@@ -674,89 +674,11 @@
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(253, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Elenco Tessere Clienti";
-            // 
-            // btnConferma
-            // 
-            this.btnConferma.BackColor = System.Drawing.Color.White;
-            this.btnConferma.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConferma.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnConferma.Location = new System.Drawing.Point(460, 679);
-            this.btnConferma.Name = "btnConferma";
-            this.btnConferma.Size = new System.Drawing.Size(432, 49);
-            this.btnConferma.TabIndex = 32;
-            this.btnConferma.Text = "Conferma";
-            this.btnConferma.UseVisualStyleBackColor = false;
-            this.btnConferma.Click += new System.EventHandler(this.btnConferma_Click);
-            // 
-            // GrigliaFidelity
-            // 
-            this.GrigliaFidelity.AllowUserToAddRows = false;
-            this.GrigliaFidelity.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.GrigliaFidelity.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.GrigliaFidelity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GrigliaFidelity.BackgroundColor = System.Drawing.Color.White;
-            this.GrigliaFidelity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.GrigliaFidelity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GrigliaFidelity.DefaultCellStyle = dataGridViewCellStyle6;
-            this.GrigliaFidelity.GridColor = System.Drawing.Color.White;
-            this.GrigliaFidelity.Location = new System.Drawing.Point(10, 51);
-            this.GrigliaFidelity.MultiSelect = false;
-            this.GrigliaFidelity.Name = "GrigliaFidelity";
-            this.GrigliaFidelity.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GrigliaFidelity.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.GrigliaFidelity.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.GrigliaFidelity.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.GrigliaFidelity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GrigliaFidelity.Size = new System.Drawing.Size(778, 197);
-            this.GrigliaFidelity.TabIndex = 0;
-            // 
-            // btnRicerca
-            // 
-            this.btnRicerca.BackColor = System.Drawing.Color.White;
-            this.btnRicerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRicerca.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnRicerca.Location = new System.Drawing.Point(709, 8);
-            this.btnRicerca.Name = "btnRicerca";
-            this.btnRicerca.Size = new System.Drawing.Size(163, 60);
-            this.btnRicerca.TabIndex = 33;
-            this.btnRicerca.Text = "Ricerca";
-            this.btnRicerca.UseVisualStyleBackColor = false;
-            this.btnRicerca.Click += new System.EventHandler(this.btnRicerca_Click);
-            // 
             // btnScorriSu
             // 
             this.btnScorriSu.BackColor = System.Drawing.Color.White;
             this.btnScorriSu.BackgroundImage = global::AKIRAClientiFidelity.Properties.Resources.png_clipart_triangle_logo_number_up_arrow_purple_angle1;
             this.btnScorriSu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnScorriSu.Enabled = false;
             this.btnScorriSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScorriSu.ForeColor = System.Drawing.Color.SteelBlue;
             this.btnScorriSu.Location = new System.Drawing.Point(808, 51);
@@ -771,7 +693,6 @@
             this.btnScorriGiu.BackColor = System.Drawing.Color.White;
             this.btnScorriGiu.BackgroundImage = global::AKIRAClientiFidelity.Properties.Resources.giu;
             this.btnScorriGiu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnScorriGiu.Enabled = false;
             this.btnScorriGiu.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScorriGiu.ForeColor = System.Drawing.Color.SteelBlue;
             this.btnScorriGiu.Location = new System.Drawing.Point(808, 188);
@@ -780,6 +701,83 @@
             this.btnScorriGiu.TabIndex = 16;
             this.btnScorriGiu.UseVisualStyleBackColor = false;
             this.btnScorriGiu.Click += new System.EventHandler(this.btnScorriGiu_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(274, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(286, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Elenco Tessere Clienti";
+            // 
+            // GrigliaFidelity
+            // 
+            this.GrigliaFidelity.AllowUserToAddRows = false;
+            this.GrigliaFidelity.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SteelBlue;
+            this.GrigliaFidelity.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.GrigliaFidelity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GrigliaFidelity.BackgroundColor = System.Drawing.Color.White;
+            this.GrigliaFidelity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.GrigliaFidelity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GrigliaFidelity.DefaultCellStyle = dataGridViewCellStyle10;
+            this.GrigliaFidelity.GridColor = System.Drawing.Color.White;
+            this.GrigliaFidelity.Location = new System.Drawing.Point(10, 51);
+            this.GrigliaFidelity.MultiSelect = false;
+            this.GrigliaFidelity.Name = "GrigliaFidelity";
+            this.GrigliaFidelity.ReadOnly = true;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GrigliaFidelity.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SteelBlue;
+            this.GrigliaFidelity.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.GrigliaFidelity.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.GrigliaFidelity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GrigliaFidelity.Size = new System.Drawing.Size(778, 197);
+            this.GrigliaFidelity.TabIndex = 0;
+            // 
+            // btnConferma
+            // 
+            this.btnConferma.BackColor = System.Drawing.Color.White;
+            this.btnConferma.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConferma.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnConferma.Location = new System.Drawing.Point(460, 679);
+            this.btnConferma.Name = "btnConferma";
+            this.btnConferma.Size = new System.Drawing.Size(432, 49);
+            this.btnConferma.TabIndex = 32;
+            this.btnConferma.Text = "Conferma";
+            this.btnConferma.UseVisualStyleBackColor = false;
+            this.btnConferma.Click += new System.EventHandler(this.btnConferma_Click);
+            // 
+            // btnRicerca
+            // 
+            this.btnRicerca.BackColor = System.Drawing.Color.White;
+            this.btnRicerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRicerca.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnRicerca.Location = new System.Drawing.Point(709, 8);
+            this.btnRicerca.Name = "btnRicerca";
+            this.btnRicerca.Size = new System.Drawing.Size(163, 60);
+            this.btnRicerca.TabIndex = 33;
+            this.btnRicerca.Text = "Ricerca";
+            this.btnRicerca.UseVisualStyleBackColor = false;
+            this.btnRicerca.Click += new System.EventHandler(this.btnRicerca_Click);
             // 
             // ClientiFidelity
             // 
@@ -799,6 +797,7 @@
             this.Name = "ClientiFidelity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.ClientiFidelity_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
